@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>CV - Nurfauziah Ayu Lestari</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Digital - Nurfauziah Ayu Lestari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #fafafa; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        .ig-gradient { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+        .hidden-content { display: none; opacity: 0; transform: scale(0.9); transition: all 0.5s ease; }
+        .show-content { display: block !important; opacity: 1; transform: scale(1); }
+        .profile-pic { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #dbdbdb; }
+        .btn-click { cursor: pointer; transition: transform 0.3s ease; }
+        .btn-click:hover { transform: scale(1.1); }
+    </style>
 </head>
-<body>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
 
-<!-- Halaman Awal -->
-<div class="home" id="home">
-  <i class="fab fa-instagram ig-icon" onclick="showCV()"></i>
-  <p>Klik ikon Instagram</p>
-</div>
-
-<!-- Halaman CV -->
-<div class="cv hidden" id="cv">
-  <div class="card">
-    <img src="file_00000000138872068ef6546c60c9b32a.png" class="photo">
-
-    <h1>Nurfauziah Ayu Lestari</h1>
-    <p class="bio">Dapat bekerja dengan baik</p>
-
-    <div class="data">
-      <p><b>🎂 Tahun Lahir:</b> 30 Agustus 2008</p>
-      <p><b>📞 Nomor:</b> 08990861871</p>
-      <p><b>📍 Alamat:</b> Kp. Cipicung, Kec. Baleendah</p>
-      <p><b>🎵 Hobi:</b> Mendengarkan musik, bermain alat musik</p>
-      <p><b>🎓 Pendidikan:</b> SD 2019, SMP 2023, SMA 2026</p>
-      <p><b>💼 Pengalaman:</b> Bisnis voucher kuota (SD–SMA) – Lulus 2026</p>
-      <p><b>🧠 Keahlian:</b> Komunikasi dengan baik</p>
-      <p><b>🏆 Sertifikat:</b> Penghargaan Kawih</p>
-
-      <p><b>🌍 Bahasa:</b></p>
-      <ul>
-        <li>Sunda 70%</li>
-        <li>Indonesia 100%</li>
-        <li>Jepang 20%</li>
-      </ul>
+    <div id="start-node" class="text-center">
+        <div onclick="revealCV()" class="ig-gradient p-4 rounded-3xl text-white text-6xl btn-click shadow-xl">
+            <i class="fab fa-instagram"></i>
+        </div>
+        <p class="mt-4 text-gray-500 font-medium animate-pulse">Klik ikon untuk melihat CV</p>
     </div>
 
-    <a href="https://instagram.com/nrfzh_ayuu" target="_blank" class="ig-link">
-      <i class="fab fa-instagram"></i> @nrfzh_ayuu
-    </a>
-  </div>
-</div>
+    <div id="cv-content" class="hidden-content max-w-2xl w-full bg-white border border-gray-300 rounded-lg shadow-sm">
+        
+        <div class="p-6 md:flex items-center gap-10 border-b border-gray-200">
+            <img src="file_00000000138872068ef6546c60c9b32a.png" alt="Foto Profil" class="profile-pic mx-auto md:mx-0">
+            <div class="mt-4 md:mt-0 text-center md:text-left">
+                <h1 class="text-2xl font-light mb-2">nrfzh_ayuu</h1>
+                <div class="flex gap-4 justify-center md:justify-start mb-4 text-sm">
+                    <span><strong>3</strong> Kiriman</span>
+                    <span><strong>100%</strong> Indo</span>
+                    <span><strong>70%</strong> Sunda</span>
+                </div>
+                <p class="font-bold">Nurfauziah Ayu Lestari</p>
+                <p class="text-gray-600">Lahir: 30 Agustus 2008</p>
+                <p class="text-blue-900 text-sm font-medium">Dapat bekerja dengan baik</p>
+            </div>
+        </div>
 
-<script src="script.js"></script>
+        <div class="p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div>
+                    <h3 class="font-bold border-b mb-2 pb-1"><i class="fas fa-graduation-cap"></i> Pendidikan</h3>
+                    <ul class="text-sm space-y-1">
+                        <li>🎓 SD (Lulus 2019)</li>
+                        <li>🎓 SMP (Lulus 2023)</li>
+                        <li>🎓 SMA (Lulus 2026)</li>
+                    </ul>
+
+                    <h3 class="font-bold border-b mt-4 mb-2 pb-1"><i class="fas fa-briefcase"></i> Pengalaman</h3>
+                    <p class="text-sm italic">Bisnis Voucher Kuota (SD - SMA)</p>
+                    <p class="text-xs text-gray-500">Aktif hingga lulus 2026</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold border-b mb-2 pb-1"><i class="fas fa-star"></i> Keahlian</h3>
+                    <p class="text-sm">Komunikasi dengan baik, Bermain alat musik.</p>
+                    
+                    <h3 class="font-bold border-b mt-4 mb-2 pb-1"><i class="fas fa-certificate"></i> Sertifikat</h3>
+                    <p class="text-sm">🏆 Penghargaan Kawih</p>
+
+                    <h3 class="font-bold border-b mt-4 mb-2 pb-1"><i class="fas fa-map-marker-alt"></i> Alamat</h3>
+                    <p class="text-sm">Kp. Cipicung, Kec. Baleendah</p>
+                </div>
+            </div>
+
+            <div class="mt-8 flex flex-col gap-2">
+                <a href="https://wa.me/08990861871" class="w-full bg-blue-500 text-white text-center py-2 rounded font-bold text-sm hover:bg-blue-600 transition">Hubungi (WhatsApp)</a>
+                <div class="flex gap-2">
+                    <div class="w-1/2 border border-gray-300 text-center py-1 rounded text-sm font-bold">Hobby: Musik 🎵</div>
+                    <div class="w-1/2 border border-gray-300 text-center py-1 rounded text-sm font-bold">Bahasa JP: 20%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function revealCV() {
+            // Sembunyikan tombol awal
+            document.getElementById('start-node').style.display = 'none';
+            
+            // Tampilkan CV dengan animasi
+            const cv = document.getElementById('cv-content');
+            cv.classList.add('show-content');
+        }
+    </script>
 </body>
 </html>
